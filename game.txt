@@ -1,1 +1,16 @@
-BEGIN
+--- Guessing Game --- 
+
+// Replay Loop
+WHILE True DO:
+    // Initialize Game Variables
+    SET targetNumber = Random Integer(1, 100)
+    SET maxAttempts = 7
+    SET attemptsLeft = maxAttempts
+    SET hasWon = False
+
+    PRINT "Welcome to the Number Guessing Game!"
+    PRINT "There is a number between 1 and 100."
+    PRINT "You have", [maxAttempts], "attempts to guess it correctly, good luck!."
+
+// Core Game Loop 
+
