@@ -1,6 +1,6 @@
 --- Guessing Game --- 
 
-// Replay Loop
+// Replay Loop //
 WHILE True DO:
     // Initialize Game Variables
     SET targetNumber = Random Integer(1, 100)
@@ -12,5 +12,18 @@ WHILE True DO:
     PRINT "There is a number between 1 and 100."
     PRINT "You have", [maxAttempts], "attempts to guess it correctly, good luck!."
 
-// Core Game Loop 
+// Core Game Loop //
+
+WHILE attemptsLeft > 0 AND hasWon == False DO:
+    PRINT "Attempts left:", attemptsLeft
+    PROMPT user for guess
+    READ userGuess
+
+// Validate Input // 
+
+IF userGuess is not a number DO:
+    PRINT "Invalid input. Please enter a number."
+    CONTINUE // Skip to next iteration of the loop
+
+// Check Guesss // 
 
