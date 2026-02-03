@@ -27,3 +27,18 @@ IF userGuess is not a number DO:
 
 // Check Guesss // 
 
+IF userGuess == targetNumber THEN:
+    PRINT "Correct! You guessed the number!"
+    SET hasWon = True
+ELSE IF userGuess < targetNumber THEN:
+    PRINT "Too low!"
+ELSE:
+    PRINT "Too high!"
+        
+// Decrement attempts // 
+ SET attemptsLeft = attemptsLeft - 1
+
+// Win/Loss Message // 
+    IF hasWon == False THEN:
+    PRINT "Game Over! The number was:", targetNumber
+
