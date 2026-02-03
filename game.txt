@@ -1,5 +1,7 @@
 --- Guessing Game --- 
 
+[START]
+
 // Replay Loop //
 WHILE True DO:
     // Initialize Game Variables
@@ -42,3 +44,12 @@ ELSE:
     IF hasWon == False THEN:
     PRINT "Game Over! The number was:", targetNumber
 
+ // Replay Option // 
+    PROMPT user "Would you like to play again? (yes/no)"
+    READ playAgain
+    IF playAgain != "yes" THEN:
+        PRINT "Thanks for playing!"
+
+BREAK // Break out of the main loop to exit
+
+[END]
